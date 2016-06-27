@@ -1,0 +1,13 @@
+exitForm=forms.addForm()      а
+exitForm.border=2
+exitForm.W=31
+exitForm.H=7
+exitForm.left=math.floor((Form1.W-exitForm.W)/2)
+exitForm.top =math.floor((Form1.H-exitForm.H)/2)
+exitForm:addLabel(8,3,"Вы хотите выйти?")
+exitForm:addButton(5,5,"yes",function() forms.stop() end)
+exitForm:addButton(18,5,"no",function() Form1:setActive() end)
+ 
+Btn1=Form1:addButton(65,21,"Выход",function() exitForm:setActive() end)
+Btn1.color=0x505050                       
+forms.run(Form1)       
